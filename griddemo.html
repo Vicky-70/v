@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid demo </title>
+    <style>
+           .container{
+           display: grid;
+           grid-template-areas:  
+           'nav nav nav nav'
+           'sidebar main main main'
+           'sidebar content1 content2 content3'
+           'footer footer footer footer';
+           grid-template-rows: 0.3fr 1.5fr  1.3fr 0.9fr;
+           grid-template-columns: repeat(4,1fr);
+           height: 100vh;
+           gap: 0.3rem;
+           text-align: center;
+           text-transform: uppercase;
+
+
+           }
+
+           nav{
+            grid-area: nav;
+            background-color: blue;
+
+            }
+
+            main{
+                grid-area: main;
+                background-color:red;
+
+
+
+            }
+            #sidebar{ 
+                grid-area:sidebar ;
+                background-color:rgb(208, 134, 38);}
+
+            #content1{ 
+                grid-area:content1 ;
+                background-color:burlywood;
+
+            }
+
+            #content2{
+                grid-area: content2;
+                background-color:orange;
+
+
+            }
+            #content3{
+                grid-area: content3;
+                background-color: yellow;
+
+            
+             }
+                   
+            footer{
+               grid-area:footer;
+               background-color:skyblue;
+
+             }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav id="nav">navbar</nav>
+        <main id="main">main </main>
+        <div id="sidebar"> sidebar</div>
+        <div id="content1"> content1</div>
+        <div id="content2"> content2</div>
+        <div id="content3"> content3</div>
+       <footer>footer</footer>
+        
+    </div>
+</body>
+</html>
