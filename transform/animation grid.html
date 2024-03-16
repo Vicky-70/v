@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation in CSS </title>
+    <style>
+        body{
+            margin: 0;
+        }
+        #grid{
+            height: 100vh;
+            background-color: rgb(109, 195, 195);
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr ;
+            gap: 10px;
+
+
+        }
+          :where(.left,.center,.right){
+            background-color: rgb(212, 26, 26);
+        }
+        :where(.left,.center,.right):hover{
+            background-color:yellow;
+        }
+        #grid:has(.right:hover){
+        grid-template-columns: 2fr 0.5gr 0.5fr;
+        }
+
+
+    </style>
+</head>
+<body>
+    <Div id="grid"></Div>
+    <div class="class"></div>
+    <div class="right"></div>
+</body>
+</html>
